@@ -25,12 +25,13 @@ SECRET_KEY = '^a^v9!t#kkw84537v&v$w$eynh3$5=w8ri53ye%aqhggv2^03r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['words-app-server-demo.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','words-app-server-demo.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'server.apps.ServerConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
