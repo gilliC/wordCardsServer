@@ -10,6 +10,7 @@ Django==1.11.20
 django-heroku==0.3.1
 enum34==1.1.6
 folium==0.7.0
+futures==3.2.0
 gunicorn==19.9.0
 idna==2.8
 ipython==5.8.0
@@ -28,6 +29,7 @@ psycopg2==2.7.7
 ptyprocess==0.6.0
 Pygments==2.3.1
 python-dateutil==2.7.5
+python-dotenv==0.10.1
 pytz==2018.7
 requests==2.21.0
 scandir==1.9.0
