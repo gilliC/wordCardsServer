@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.core.serializers import serialize
 import json
+import uuid
 
 from .models import Word
 from .models import User
@@ -34,7 +35,8 @@ def insert_word(request, german_word, translation, gender):
         answer = german_word.title()+ " is already exists in your vocabulary"
     else:
         try:
-            new_word = Word(german_word=german_word.title(), translation=translation.title(), gender=gender.title())
+            uniqueid = uuid.uuid4()
+            new_word = Word(id = uniqueid,german_word=german_word.title(), translation=translation.title(), gender=gender.title())
             new_word.save()
             answer = "Succeed"
         except ValueError:

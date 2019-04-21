@@ -5,7 +5,7 @@ from django.db import models
 
 
 class Word(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.CharField(max_length=250,primary_key=True)
     german_word = models.CharField(max_length=250)
     translation = models.CharField(max_length=250)
     gender = models.CharField(max_length=4, default="Der")
